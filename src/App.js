@@ -14,7 +14,7 @@ function App() {
     event.preventDefault();
     // axios.get().then((data) => {});
     const { data } = await axios.post(
-      "http://localhost:3001/",
+      "https://weather-app-server-yolm.onrender.com/",
       {
         name: city,
       },
