@@ -24,6 +24,7 @@ h3 {
   text-align: center;
   box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
     0 24px 46px var(--box-shadow-color);
+  /* margin: 20px; */
 }
 
 .box {
@@ -49,6 +50,8 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .input,
@@ -62,6 +65,9 @@ h3 {
   border: none;
   cursor: pointer;
   color: black;
+  width: 25vw;
+  max-width: 300px;
+  /* width: auto; */
 }
 
 .input:focus {
@@ -79,11 +85,27 @@ h3 {
 .box {
   background: rgba(0, 0, 0, 0.5);
   /* background: rgba(255, 255, 222, 0.3); */
+  margin: 30px;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .box {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn,
+  .input {
+    width: 70vw;
   }
 }
