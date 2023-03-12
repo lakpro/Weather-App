@@ -16,6 +16,7 @@ h3 {
   align-items: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  transition: background-image 1.5s;
 }
 .box {
   padding: 50px;
@@ -32,23 +33,10 @@ h3 {
   justify-self: center;
   overflow: hidden;
   display: block;
-  /* width: 100%;
-  max-width: 250px;
-  height: 400px; */
   font-size: var(--fontOrigin);
   border-radius: 8px;
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.6);
-  /* cursor: pointer; */
-  /* -webkit-transition: all var(1s) ease; */
-  /* transition: all var(1s) ease; */
-  /* transition: transform 330ms ease-in-out; */
 }
-/* 
-.box:hover {
-  box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
-  -webkit-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
-} */
 
 .greeting {
   margin-top: 5px;
@@ -66,7 +54,6 @@ h3 {
 .input,
 .btn {
   height: 50px;
-  /* padding: 2rem; */
   text-align: center;
   font-size: larger;
   font-weight: bold;
@@ -81,12 +68,11 @@ h3 {
   background: rgba(255, 255, 225, 0.6);
 }
 
-.data {
-  /* margin-top: 50px; */
+.data,
+.data2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 150px; */
   justify-content: center;
 }
 
@@ -100,14 +86,4 @@ h3 {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
-}
-
-.text {
-  /* margin-bottom: 50px; */
-}
-
-/* box transition */
-.box {
-  height: fit-content;
-  transition: flex 2s ease-in-out;
 }

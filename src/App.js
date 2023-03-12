@@ -1,7 +1,7 @@
 import "./App.css";
 import { useDebugValue, useEffect, useState } from "react";
 import axios from "axios";
-import moment from "moment";
+import moment, { duration } from "moment";
 
 function App() {
   const [city, setCity] = useState("");
@@ -15,34 +15,13 @@ function App() {
   const [hour, setHour] = useState(new Date().getHours());
   const [greeting, setGreeting] = useState();
   const [bg, setBg] = useState("/pics/welcome.jpg");
-
-  // const styles = {
-  //   if(weather) {
-  //     backgroundImage: url("clouds-bg.jpg")
-  //   }else if(weather) {
-  //     backgroundImage: url("clouds-bg.jpg")
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (weather) {
-  //     setBg("clouds-bg.jpg");
-  //   } else if (weather) {
-  //     setBg("clouds-bg.jpg");
-  //   }
-  // }, weather);
+  const [display, setDisplay] = useState(false);
 
   useEffect(() => setFirst(true), first);
 
-  // useEffect(() => {
-  //   document.getElementsByClassName(
-  //     "data"
-  //   ).style.backgroundImage = `url(${bg})`;
-  // }, bg);
-
   useEffect(() => {
     if (hour >= 5 && hour < 12) setGreeting("Morning");
-    else if (hour >= 12 && hour < 5) setGreeting("After");
+    else if (hour >= 12 && hour < 17) setGreeting("Afternoon");
     else setGreeting("Evening");
   }, []);
 
@@ -79,16 +58,6 @@ function App() {
     });
 
     console.log(bg);
-    // document.getElementsByClassName(
-    //   "data"
-    // ).style.backgroundImage = `url(${bg})`;
-    // axios
-    //   .post("http://localhost:3001/", {
-    //     name: event.target.name,
-    //   })
-    //   .then((res) => {
-    //     console.log("SUCCESS!!");
-    //   });
   }
 
   function handleChange(event) {
@@ -120,6 +89,8 @@ function App() {
           {!error && weather && <h2>Weather: {weather}</h2>}
           {!error && temp && <h3>Temp: {temp}°C</h3>}
           {!error && url && <img className="img" src={url} />}
+        </div>
+        <div className="data2">
           {!first && error && (
             <h1 className="text">Please enter correct City</h1>
           )}
