@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+h1,
+h2,
+h3 {
+  margin-top: 5px;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.box {
+  padding: 50px;
+  border-radius: 9px;
+  text-align: center;
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.box {
+  position: relative;
+  grid-area: card;
+  align-self: center;
+  justify-self: center;
+  overflow: hidden;
+  display: block;
+  /* width: 100%;
+  max-width: 250px;
+  height: 400px; */
+  font-size: var(--fontOrigin);
+  border-radius: 8px;
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.6);
+  /* cursor: pointer; */
+  /* -webkit-transition: all var(1s) ease; */
+  /* transition: all var(1s) ease; */
+  /* transition: transform 330ms ease-in-out; */
+}
+/* 
+.box:hover {
+  box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+} */
+
+.greeting {
+  margin-top: 5px;
+  letter-spacing: 10px;
+}
+
+.form {
+  margin-top: 35px;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.input,
+.btn {
+  height: 50px;
+  /* padding: 2rem; */
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 9px;
+  background: rgba(255, 255, 222, 0.6);
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.input:focus {
+  background: rgba(255, 255, 225, 0.6);
+}
+
+.data {
+  /* margin-top: 50px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 150px; */
+  justify-content: center;
+}
+
+.box {
+  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(255, 255, 222, 0.3); */
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .box {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.text {
+  /* margin-bottom: 50px; */
+}
+
+/* box transition */
+.box {
+  height: fit-content;
+  transition: flex 2s ease-in-out;
+}
