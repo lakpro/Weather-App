@@ -129,7 +129,7 @@ h3 {
 
 .form-s {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
 }
@@ -157,6 +157,16 @@ h3 {
 
   .btn,
   .input {
-    width: 70vw;
+    width: 100%;
+  }
+
+  .box,
+  .box-s {
+    width: 80vw;
+    padding: 3.5vw;
+  }
+
+  .form-s {
+    flex-direction: column;
   }
 }
