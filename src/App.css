@@ -12,6 +12,7 @@ h3 {
 .main {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
@@ -25,6 +26,7 @@ h3 {
   box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
     0 24px 46px var(--box-shadow-color);
   /* margin: 20px; */
+  width: 50vw;
 }
 
 .box {
@@ -88,11 +90,60 @@ h3 {
   margin: 30px;
 }
 
+.box-s {
+  padding: 50px;
+  border-radius: 9px;
+  text-align: center;
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px var(--box-shadow-color);
+  /* margin: 20px; */
+  width: 50vw;
+  position: relative;
+  grid-area: card;
+  align-self: center;
+  justify-self: center;
+  overflow: hidden;
+  display: block;
+  font-size: var(--fontOrigin);
+  border-radius: 8px;
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(255, 255, 222, 0.3); */
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .box {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
+  .box-s {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.form-s {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.inp-s {
+  width: 25vw;
+  max-width: 300px;
+}
+
+.data-s {
+  width: 20vw;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
