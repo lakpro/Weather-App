@@ -137,7 +137,6 @@ function App() {
           </div>
         </SkeletonTheme>
       )}
-      ;
     </div>
   );
 }

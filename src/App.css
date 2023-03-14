@@ -114,6 +114,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: fit-content;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -164,6 +165,7 @@ h3 {
   .box-s {
     width: 80vw;
     padding: 3.5vw;
+    height: fit-content;
   }
 
   .form-s {
