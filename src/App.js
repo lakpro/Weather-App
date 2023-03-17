@@ -82,6 +82,7 @@ function App() {
               placeholder={placeholder}
               onChange={handleChange}
               value={city}
+              autoComplete="off"
             />
             <button className="btn" onClick={handleSubmit}>
               SUBMIT
